@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Utils
 {
-    public class MyInit : DropCreateDatabaseIfModelChanges<Context>
+    public class MyInit : DropCreateDatabaseAlways<Context>
     {
 
         protected override void Seed(Context context)
@@ -21,7 +21,7 @@ namespace DataAccessLayer.Utils
             context.Users.Add(new User {  Name = "Vitalii", EMail = "fancytoys@gmail.com" });
             context.Users.Add(new User {  Name = "Gabe", EMail = "getblowjob@gmail.com" });
 
-
+            context.SaveChanges();
         }
     }
 }

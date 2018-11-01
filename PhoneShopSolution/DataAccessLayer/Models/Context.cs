@@ -12,6 +12,7 @@ namespace DataAccessLayer.Models
         {
             Database.SetInitializer(new MyInit());
         }
+        
 
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Phone> Phones { get; set; }
