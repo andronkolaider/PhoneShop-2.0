@@ -14,7 +14,7 @@ namespace DALTesting
         static void Main(string[] args)
         {
             Repository<User> repository = new Repository<User>(new Context());
-              foreach(var item in repository.GetAll())
+            foreach (var item in repository.GetAll())
             {
                 Console.WriteLine(item.Name + " " + item.EMail);
             }
