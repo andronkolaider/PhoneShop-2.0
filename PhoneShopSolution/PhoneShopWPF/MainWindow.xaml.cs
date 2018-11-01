@@ -20,9 +20,29 @@ namespace PhoneShopWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+     //   List<>;
+  
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void ListView_Phones_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           
+        }
+
+        private void MenuItem_sign_up_Click(object sender, RoutedEventArgs e)
+        {
+
+
+
+        }
+
+        private void MenuItem_sign_in_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

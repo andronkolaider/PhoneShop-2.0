@@ -5,9 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhoneShopWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" 
         
+        
+        Height="600" Width="1000"
+        MinHeight="450" MinWidth="800"
+    
+        
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Menu Grid.ColumnSpan="2" FontSize="18">
+            <MenuItem Header="File">
+                <MenuItem Name="MenuItem_sign_up" Header="Sign-up" Click="MenuItem_sign_up_Click"></MenuItem>
+                <MenuItem  Name="MenuItem_sign_in" Header="Sign-In" Click="MenuItem_sign_in_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <ListView Name="ListView_Phones" Grid.Row="1" SelectionChanged="ListView_Phones_SelectionChanged" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
         
     </Grid>
 </Window>
