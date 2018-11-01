@@ -28,6 +28,7 @@ namespace DataAccessLayer.Repositories
 
         public void Delete(T Entity)
         {
+            Collection.Attach(Entity);
             Collection.Remove(Entity);
             db.SaveChanges();
         }
@@ -46,7 +47,6 @@ namespace DataAccessLayer.Repositories
         {
             db.Entry<T>(Entity).State = EntityState.Modified;
             db.SaveChanges();
-
         }
     }
 }

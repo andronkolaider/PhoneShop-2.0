@@ -1,5 +1,6 @@
 namespace DataAccessLayer.Models
 {
+    using DataAccessLayer.Utils;
     using System;
     using System.Data.Entity;
     using System.Linq;
@@ -9,6 +10,7 @@ namespace DataAccessLayer.Models
         public Context()
             : base("name=connectionString")
         {
+            Database.SetInitializer(new MyInit());
         }
 
         public virtual DbSet<User> Users { get; set; }
